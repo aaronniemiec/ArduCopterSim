@@ -1,2 +1,2 @@
 # ArduCopterSim
-ardupilot/ArduCopter Simulink Models
+ardupilot/ArduCopter Simulink Models and Supporting Documentation
