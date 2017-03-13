@@ -36,6 +36,17 @@ k_thrust = 1; % Thrust Constant (Function of Ct, p, and a_rotor)
 
 k_drag = 1; % Drag Constant
 
+dist_to_cg_x = 9; % (inches) Distance from propellor to cg
+dist_to_cg_y = 9; % (inches) Distance from propellor to cg
+
+Ixx = 1; % (kg-m^2)
+Iyy = 1; % (kg-m^2)
+Izz = 1; % (kg-m^2)
+
+pitch_inertia_ratio = (Izz - Iyy)/Ixx;
+roll_inertia_ratio = (Ixx - Izz)/Iyy;
+yaw_inertia_ratio = (Iyy - Ixx)/Izz;
+
 %% Finalize Any Remaining Items
 
 clc
