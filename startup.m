@@ -36,6 +36,11 @@ k_thrust = 1; % Thrust Constant (Function of Ct, p, and a_rotor)
 
 k_drag = 1; % Drag Constant
 
+%% Controller Parameters
+dt = 0.01; % Intersampling period in seconds
+use_ff = true;
+smoothing_gain = 1;
+
 %% Finalize Any Remaining Items
 
 clc
