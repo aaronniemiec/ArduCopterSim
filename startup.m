@@ -12,6 +12,10 @@ cd([dir '/Models'])
 
 ArduCopter_3DR;
 
+%% Controller Parameters
+use_ff = true;
+smoothing_gain = 1;
+
 %% Initialize ArduCopter_3DR Simulink Model Parameters
 
 % DC Motor Parameters
@@ -36,10 +40,19 @@ k_thrust = 1; % Thrust Constant (Function of Ct, p, and a_rotor)
 
 k_drag = 1; % Drag Constant
 
-%% Controller Parameters
 dt = 0.01; % Intersampling period in seconds
-use_ff = true;
-smoothing_gain = 1;
+
+dist_to_cg_x = 9; % (inches) Distance from propellor to cg
+dist_to_cg_y = 9; % (inches) Distance from propellor to cg
+
+Ixx = 1; % (kg-m^2)
+Iyy = 1; % (kg-m^2)
+Izz = 1; % (kg-m^2)
+
+pitch_inertia_ratio = (Izz - Iyy)/Ixx;
+roll_inertia_ratio = (Ixx - Izz)/Iyy;
+yaw_inertia_ratio = (Iyy - Ixx)/Izz;
+
 
 %% Finalize Any Remaining Items
 
