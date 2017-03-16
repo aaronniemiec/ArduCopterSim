@@ -13,8 +13,14 @@ cd([dir '/Models'])
 ArduCopter_3DR;
 
 %% Controller Parameters
+
+dt = 0.01; % Intersampling period in seconds
 use_ff = true;
 smoothing_gain = 1;
+
+% Set ff variant in simulink
+USE_FF_VARIANT=Simulink.Variant('use_ff==1');
+USE_DIRECT_VARIANT=Simulink.Variant('use_ff==0');
 
 %% Initialize ArduCopter_3DR Simulink Model Parameters
 
@@ -39,8 +45,6 @@ Ct = 1; % Function of Rotor Geometry and Profile
 k_thrust = 1; % Thrust Constant (Function of Ct, p, and a_rotor)
 
 k_drag = 1; % Drag Constant
-
-dt = 0.01; % Intersampling period in seconds
 
 dist_to_cg_x = 9; % (inches) Distance from propellor to cg
 dist_to_cg_y = 9; % (inches) Distance from propellor to cg
