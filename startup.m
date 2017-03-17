@@ -17,6 +17,9 @@ ArduCopter_3DR;
 dt = 0.01; % Intersampling period in seconds
 use_ff = true;
 smoothing_gain = 1;
+AC_ATTITUDE_ACCEL_RP_CONTROLLER_MIN_RADDS = 1;
+AC_ATTITUDE_ACCEL_RP_CONTROLLER_MAX_RADSS = 1;
+AC_P = 1;
 
 % Set ff variant in simulink
 USE_FF_VARIANT=Simulink.Variant('use_ff==1');
