@@ -23,6 +23,7 @@ AC_ATTITUDE_ACCEL_RP_CONTROLLER_MAX_RADSS = 720;
 AC_ATTITUDE_ACCEL_Y_CONTROLLER_MIN_RADSS = 10;
 AC_ATTITUDE_ACCEL_Y_CONTROLLER_MAX_RADSS = 120;
 
+% TODO don't forget to add conversions to rads
 % Attitude accel roll/pitch max [Centi-Degrees/Sec/Sec]
 % 0	Disabled
 % 72000	Slow
@@ -39,6 +40,13 @@ ATC_ACCEL_R_MAX = 72000;
 ATC_ACCEL_Y_MAX = 36000;
 
 AC_P = 1;
+
+% Max acc [rads] (TODO, find actual param names and defaults)
+ACC_R_MAX = 10;
+ACC_P_MAX = 10;
+ACC_Y_MAX = 10;
+
+
 
 % ATC controller params
 ATC_ANG_RLL_P = 4.5000; % range: 3.000 - 12.000
