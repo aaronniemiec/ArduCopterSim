@@ -73,7 +73,10 @@ k_torque = 1; % Torque Constant
 
 Jm = 1; % Motor Inertia
 
-% Quadcopter Dynamics Parameters
+% Quadcopter Dynamics Parameters (Based on 3DR Solo Quadcopter)
+gravity = 32.37; % (ft/sec^2)
+quad_mass = 10; % Mass of Quadcopter
+
 a_rotor = 1; % Rotor Area
 p = 1; % Air Density
 Ct = 1; % Function of Rotor Geometry and Profile
@@ -91,7 +94,6 @@ Izz = 1; % (kg-m^2)
 pitch_inertia_ratio = (Izz - Iyy)/Ixx;
 roll_inertia_ratio = (Ixx - Izz)/Iyy;
 yaw_inertia_ratio = (Iyy - Ixx)/Izz;
-
 
 %% Finalize Any Remaining Items
 
