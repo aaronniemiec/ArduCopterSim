@@ -6,7 +6,7 @@
 clear
 clc
 
-dir = pwd;
+dir = pwd; % TODO make this script location, not pwd
 addpath([dir '/Models'])
 cd([dir '/Models'])
 
