@@ -41,13 +41,6 @@ ATC_ACCEL_Y_MAX = 36000;
 
 AC_P = 1;
 
-% Max acc [rads] (TODO, find actual param names and defaults)
-ACC_R_MAX = 10;
-ACC_P_MAX = 10;
-ACC_Y_MAX = 10;
-
-
-
 % ATC controller params
 ATC_ANG_RLL_P = 4.5000; % range: 3.000 - 12.000
 ATC_ANG_PIT_P = 4.5000; % range: 3.000 - 12.000
