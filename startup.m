@@ -6,9 +6,11 @@
 clear
 clc
 
-dir = pwd; % TODO make this script location, not pwd
-addpath([dir '/Models'])
-cd([dir '/Models'])
+% Note: make sure to run from ide else mfilename wil return ''
+dir = fileparts(mfilename('fullpath'));
+modpath = [dir filesep 'Models'];
+addpath(modpath);
+% cd(modpath); % Optional
 
 ArduCopter_3DR;
 
