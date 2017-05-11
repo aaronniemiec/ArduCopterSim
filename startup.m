@@ -52,6 +52,10 @@ ATC_ANG_YAW_P = 4.5000; % range: 3.000 - 6.000
 USE_FF_VARIANT=Simulink.Variant('use_ff==1');
 USE_DIRECT_VARIANT=Simulink.Variant('use_ff==0');
 
+%% Controller values
+% angle controller P objects
+p_angle_yaw_kp = 0.01;
+
 %% Initialize ArduCopter_3DR Simulink Model Parameters
 
 % DC Motor Parameters
